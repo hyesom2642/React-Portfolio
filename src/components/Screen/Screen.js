@@ -1,11 +1,13 @@
 // > styled-components 
-import { Wrapper, Container, Header, ButtonWrapper, Title, Content  } from './ScreenElement';
+import { Wrapper, Container, Header, ButtonWrapper, Title, Content } from './ScreenElement';
 
 // import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// > icons 
+import { IoMdClose, IoMdResize } from "react-icons/io";
+
 const Screen = ({children, ProfileData}) => {
-    console.log(ProfileData);
     let navigate = useNavigate();
     
     function goHome(){
@@ -18,9 +20,13 @@ const Screen = ({children, ProfileData}) => {
                 <Container>
                     <Header>
                         <ButtonWrapper>
-                            <button className="red" onClick={goHome}></button>
+                            <button className="red" onClick={goHome}>
+                                < IoMdClose className="ic-close" />
+                            </button>
                             <button className="yellow"></button>
-                            <button className="green"></button>
+                            <button className="green">
+                                < IoMdResize className="ic-resize" />
+                            </button>
                         </ButtonWrapper>
                         <Title>
                         </Title>
