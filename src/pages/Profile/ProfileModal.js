@@ -35,12 +35,12 @@ const Wrapper = styled.div`
 
 const Modal = styled.div`
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
   max-width: 500px;
   padding: 20px;
-  background-color: skyblue;
+  background-color: #fff;
   border-radius: 10px;
 
   h1 {
@@ -52,22 +52,5 @@ const Modal = styled.div`
   }
   p {
     font-size: 16px;
-    
   }
-
-  // .html {
-  //   background-color: hotpink;
-  // }
-  // .css {
-  //   background-color: blue;
-  // }
-  // .javascript {
-  //   background-color: red;
-  // }
-  // .react {
-  //   background-color: orange;
-  // }
-  // .typescript {
-  //   background-color: yellow;
-  // }
 `;

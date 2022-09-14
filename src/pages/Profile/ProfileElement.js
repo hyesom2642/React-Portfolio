@@ -77,8 +77,8 @@ const Container = styled.div`
         left: 50%;
         transform: translate(-50%, -50%);
         display: block;
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         border: 0;
         border-radius: 50%;
         z-index: 200;
@@ -87,8 +87,8 @@ const Container = styled.div`
     .logo {
         position: absolute;
         display: block;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         border: 0;
         border-radius: 50%;
         cursor: pointer;
@@ -116,6 +116,26 @@ const Container = styled.div`
     .typescript {
         animation: ${tsMove} 2s ease-in-out forwards;
     }
-`;
 
+    @media screen and ${(props) => props.theme.tablet}{
+        .profile {
+            width: 250px;
+            height: 250px;
+        }
+        .logo {
+            width: 90px;
+            height: 90px;
+        }
+    }
+    @media screen and ${(props) => props.theme.desktop}{
+        .profile {
+            width: 300px;
+            height: 300px;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+    }
+`;
 export { Container };
