@@ -8,23 +8,35 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     z-index: 99;
+
+    @media screen and ${(props) => props.theme.tablet} {
+
+    }
 `;
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 1400px;
-    height: 100%;
-    max-height: 600px;
+    height: 100%;    
     background-color: #fff;
-    border-radius: 7px;
+    
     overflow: hidden;
+
+    @media screen and ${(props) => props.theme.tablet}{
+        max-width: 750px;
+        max-height: 600px;
+        border-radius: 7px;
+    }
+    @media screen and ${(props) => props.theme.desktop}{
+        max-width: 1200px;
+        max-height: 700px;
+    }
 `;
 
 const Header = styled.header`
