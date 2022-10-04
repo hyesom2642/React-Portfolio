@@ -1,14 +1,14 @@
 // > styled-components
 import styled from 'styled-components';
 
-const Modal = () => {
+const Modal = ({modalClose, ProjectData, src}) => {
   return(
     <>
       <Overlay />
       <Container>
-        <CloseButton />
+        <CloseButton onClick={modalClose} />
         <ModalForm>
-
+          <Img src={src} alt="" />
         </ModalForm>
       </Container>
     </>
@@ -38,19 +38,25 @@ const ModalForm = styled.div`
   width: 80%;
   height: 70%;
   border-radius: 10px;
-  background-color: beige;
+  background-color: #fff;
   z-index: 100;
 `;
 
 const CloseButton = styled.div`
   position: absolute;
   left: 50%;
-  top: 5%;
+  top: 3%;
   transform: translate(-50%, 5%);
   width: 80px;
   height: 80px;
   border-radius: 50%;
   background-color: #fff;
   cursor: pointer;
-  z-index: 100;
+  z-index: 200;
+`;
+
+const Img = styled.img`
+  display: block;
+  width: 300px;
+  height: 300px;
 `;
