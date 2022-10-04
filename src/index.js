@@ -11,8 +11,6 @@ import "slick-carousel/slick/slick-theme.css";
 // > react-router-dom@6 
 import { BrowserRouter } from 'react-router-dom';
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
