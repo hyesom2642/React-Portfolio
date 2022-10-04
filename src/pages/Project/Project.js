@@ -2,46 +2,60 @@
 import styled from 'styled-components';
 
 // > react-carousel 
-import Slider from 'react-slick';
+import Slider from "react-slick";
+
+// > 
+import { useState } from 'react';
 
 // > components
 import Screen from '../../components/Screen/Screen';
+import Modal from '../../components/Modal/Modal';
+import Data from './ProjectData';
 
 const Proejct = () => {
     const settings = {
         className: "center",
-        dots: false,
         centerMode: true,
         infinite: true,
-        centerPadding: "60px",
+        centerPadding: "80px",
         slidesToShow: 3,
+        slidesToScroll: 1,
         autoplay: true,
-        speed: 3000
+        speed: 1000
+    };
+
+    const [ProjectData] = useState(Data);
+    const [open, setOpen] = useState(false);
+    const [src, setSrc] = useState('');
+
+    function modalOpen(e){
+        setOpen(true);
+        setSrc(e.target.currentSrc);
+    };
+    function modalClose(){
+        setOpen(false);
     };
 
     return(
         <>
             <Screen>
                 <Container>
-                    <SliderWrapper {...settings}>
-                        <div>
-                            <img src="https://img1.daumcdn.net/thumb/R300x0/?fname=https://k.kakaocdn.net/dn/vgB4d/btrdImQHKhR/1rnBjRP1nkgIkNKiwqlWn1/img.png" alt="" />
-                        </div>
-                        <div>
-                            <img src="https://pbs.twimg.com/media/Ex2WofyVoAEP-mv.jpg:large" alt="" />
-                        </div>
-                        <div>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RvKtYPJjLa2qlP9JKMOaj_Wjj3qT3CftbmahpTCQOX5f4nQibS7uZhjjOXA4ocUssBA&usqp=CAU" alt="" />
-                        </div>
-                        <div>
-                            <h3>4</h3>
-                        </div>
-                        <div>
-                            <h3>5</h3>
-                        </div>
-                    </SliderWrapper>
+                    <SliderContainer {...settings}>
+                        {
+                            ProjectData.map((item) => 
+                                <div onClick={modalOpen} key={item.name}>
+                                    <img src={item.imgUrl} alt={item.name} />
+                                </div>
+                            )
+                        }
+                    </SliderContainer>
                 </Container>
             </Screen>
+            {
+                open === true
+                ? <Modal modalClose={modalClose} ProjectData={ProjectData} src={src} />
+                : null
+            }
         </>
     )
 }
@@ -50,29 +64,21 @@ export default Proejct;
 const Container = styled.div`
     width: 100%;
     height: 100%;
-
-
 `;
 
-const SliderWrapper = styled(Slider)`
+const SliderContainer = styled(Slider)`
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-color: hotpink;
-
-    div {
-        width: 100%;
+    
+    img {
+        display: block;
+        width: 300px;
         height: 100%;
-    }
-
-        img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            cursor: pointer;
-        }
+        cursor: pointer;
+        object-fit: contain;
     }
 `;
