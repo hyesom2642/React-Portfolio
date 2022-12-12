@@ -20,12 +20,11 @@ const Container = styled.div`
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 100%;    
     background-color: #fff;
-    
     overflow: hidden;
 
     @media screen and ${(props) => props.theme.tablet}{
@@ -44,9 +43,9 @@ const Header = styled.header`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
     width: 100%;
-    height: 7%;
+    height: 40px;
     background-color: #c0c0c0;
 `;
 
