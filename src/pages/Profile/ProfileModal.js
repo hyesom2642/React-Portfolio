@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { useState } from 'react';
 
+// > profiledata
 import ProfileData from './ProfileData';
 
 const ProfileModal = ({state}) => {
@@ -37,10 +38,11 @@ const Modal = styled.div`
   position: absolute;
   top: 10%;
   left: 50%;
-  transform: translate(-50%, -10%);
+  transform: translate(-50%);
   max-width: 500px;
   padding: 20px;
   background-color: #fff;
+  border: 1px solid #eee;
   border-radius: 10px;
 
   h1 {
