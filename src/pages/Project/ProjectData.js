@@ -1,28 +1,45 @@
 const ProjectData = [
   {
-    name: 'projectName1',
+    id: 0,
+    title: 'projectName1',
     imgUrl: "https://pbs.twimg.com/media/DzMlyvoUUAAfHUH.jpg",
-    desc: '',
+    desc: '이곳은 프로젝트1 설명란입니다.',
+    codeUrl: 'https://www.naver.com',
+    demoUrl: 'https://www.naver.com',
+
   },
   {
-    name: 'projectName2',
+    id: 1,
+    title: 'projectName2',
     imgUrl: "https://pbs.twimg.com/media/ECZAL6bUwAAQwux.jpg",
-    desc: '',
+    desc: '이곳은 프로젝트2 설명란입니다.',
+    codeUrl: 'https://www.naver.com',
+    demoUrl: 'https://www.naver.com',
   },
   {
-    name: 'projectName3',
+    id: 2,
+    title: 'projectName3',
     imgUrl: "https://pbs.twimg.com/media/Egy3gRSUYAIYXni.jpg",
-    desc: '',
+    desc: '이곳은 프로젝트3 설명란입니다.',
+    codeUrl: 'https://www.naver.com',
+    demoUrl: 'https://www.naver.com',
   },
   {
-    name: 'projectName4',
+    id: 3,
+    title: 'projectName4',
     imgUrl: "https://pbs.twimg.com/media/DYATu_sUMAAAR_y.jpg",
-    desc: '',
+    desc: '이곳은 프로젝트4 설명란입니다.',
+    codeUrl: 'https://www.naver.com',
+    demoUrl: 'https://www.naver.com',
   },
   {
-    name: 'projectName5',
+    id: 4,
+    title: 'projectName5',
     imgUrl: "https://pbs.twimg.com/media/E0N4gLQVUAIGFPM.png:small",
-    desc: '',
+    desc: '이곳은 프로젝트5 설명란입니다.',
+    codeUrl: 'https://www.naver.com',
+    demoUrl: 'https://www.naver.com',
   },
 ];
+
 export default ProjectData;
