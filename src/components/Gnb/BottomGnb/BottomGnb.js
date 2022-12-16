@@ -10,12 +10,7 @@ import BottomData from './BottomData';
 
 const BottomGnb = () => {
   const [iconData] = useState(BottomData);
-  // const [open, setOpen] = useState(false);
   let navigate = useNavigate();
-
-  // function screenHandler() {
-  //   setOpen(!open);
-  // }
 
   return(
     <>
@@ -28,7 +23,6 @@ const BottomGnb = () => {
                 src={icons.imageUrl}
                 alt={icons.title}
                 onClick={() => {
-                  // screenHandler()
                   navigate(`${icons.path}`)
                 }}
               />
@@ -39,4 +33,5 @@ const BottomGnb = () => {
     </>
   )
 }
+
 export default BottomGnb;
