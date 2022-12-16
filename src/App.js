@@ -1,6 +1,5 @@
 // > styles 
 import './reset.css';
-
 import { ThemeProvider } from 'styled-components';
 import theme from './theme/theme';
 
@@ -10,7 +9,7 @@ import Home from './pages/Home/Home';
 import Profile from './pages/Profile/Profile';
 import Project from './pages/Project/Project';
 
-// > react-router-dom@6 
+// > react-router-dom@6
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -19,9 +18,9 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Gnb />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/project" element={<Project />} />
+          <Route path="/" element={<Home />} /> {/* main 페이지 */}
+          <Route path="/profile" element={<Profile />} /> {/* profile 페이지 */}
+          <Route path="/project" element={<Project />} /> {/* project 페이지 */}
         </Routes>
       </ThemeProvider>
     </>
